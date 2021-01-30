@@ -1,3 +1,7 @@
-<p>{{goal.description}}</p>
-<p>This goal will be complete in {{goal.completeDate|dateCount}} days</p>
-<button (click)= 'goalDelete(true)' class="btn btn-outline-danger">Delete Goal</button>
+<p *ngFor='let goal for goal'>
+    description.{{goal.description}}
+</p>
+<p *ngFor='let goal for goal'>
+  This goal will be complete in completeDate.{{goal.completeDate|dateCount}} days
+</p>
+<button (click)='goalDelete(true)' class="btn btn-outline-danger">Delete Goal</button>
